@@ -1,0 +1,19 @@
+{
+	"name": "flow-backend",
+	"version": "1.0.0",
+	"description": "flow api server",
+	"main": "index.js",
+	"author": "koojaa",
+	"license": "MIT",
+	"dependencies": {
+		"koa": "^2.11.0",
+		"koa-router": "^8.0.8"
+	},
+	"scripts": {
+		"start": "node src",
+		"start:dev": "nodemon --watch src/ src/index.js"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.2"
+	}
+}
