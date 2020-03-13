@@ -5,6 +5,8 @@ const { PORT: port } = process.env;
 import Koa from 'koa';
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
+import db from './db';
+db();
 
 const server = new Koa();
 const router = new Router();
