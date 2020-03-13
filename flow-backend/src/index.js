@@ -11,7 +11,7 @@ db();
 const server = new Koa();
 const router = new Router();
 
-router.use('/api', api.routes());
+router.use('/api.v1.0', api.routes());
 
 server.use(bodyParser());
 server.use(router.routes()).use(router.allowedMethods());
