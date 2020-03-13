@@ -1,19 +1,25 @@
 {
-	"name": "flow-backend",
-	"version": "1.0.0",
-	"description": "flow api server",
-	"main": "index.js",
-	"author": "koojaa",
-	"license": "MIT",
-	"dependencies": {
-		"koa": "^2.11.0",
-		"koa-router": "^8.0.8"
-	},
-	"scripts": {
-		"start": "node src",
-		"start:dev": "nodemon --watch src/ src/index.js"
-	},
-	"devDependencies": {
-		"nodemon": "^2.0.2"
-	}
+  "name": "flow-backend",
+  "version": "1.0.0",
+  "description": "flow api server",
+  "main": "index.js",
+  "author": "koojaa",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^8.0.8",
+    "mongoose": "^5.9.4"
+  },
+  "scripts": {
+    "start:expr": "node --experimental-modules --es-module-specifier-resolution=node src/index.js",
+    "start:dev:expr": "nodemon --experimental-modules --es-module-specifier-resolution=node --watch src/ src/index.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "nodemon": "^2.0.2"
+  },
+  "type": "module"
 }

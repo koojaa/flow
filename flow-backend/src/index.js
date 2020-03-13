@@ -1,10 +1,9 @@
-const Koa = require('koa');
+import {} from './lib/envPreloader';
+const { PORT: port } = process.env;
+
+import Koa from 'koa';
 const server = new Koa();
 
-server.use(ctx => {
-	ctx.body = 'hello world!';
-});
-
-server.listen(4000, () => {
-	console.log('server on port 4000');
+server.listen(port, () => {
+  console.log(`on port ${port}`);
 });
