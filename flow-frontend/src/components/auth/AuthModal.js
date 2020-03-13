@@ -8,18 +8,50 @@ import './AuthModal.scss';
 
 class AuthModal extends Component {
 	render() {
+		const { onChange, onSubmit, type, form } = this.props;
+		console.log(type);
+
 		return (
 			<Template>
 				<Paper>
-					<h1 className="title">회원가입</h1>
-					<form className="auth-modal">
-						<Input full placeholder="아이디" />
-						<Input full placeholder="비밀번호" />
-						<Input full placeholder="비밀번호 확인" />
+					<h1 className="title">{type === 'login' ? 'login' : 'register'}</h1>
+					<form className="auth-modal" onSubmit={onSubmit}>
+						<Input
+							name="username"
+							full
+							placeholder="아이디"
+							onChange={onChange}
+							value={form.username}
+						/>
+						<Input
+							name="password"
+							full
+							placeholder="비밀번호"
+							onChange={onChange}
+							value={form.password}
+						/>
+						{type === 'register' && (
+							<Input
+								name="passwordConfirm"
+								full
+								placeholder="비밀번호 확인"
+								onChange={onChange}
+								value={form.passwordConfirm}
+							/>
+						)}
 						<Button full marginTop>
-							회원가입
+							{type === 'login' ? 'login' : 'register'}
 						</Button>
-						<Link className="auth-button">로그인</Link>
+
+						{type === 'login' ? (
+							<Link className="auth-button" to="/register">
+								register
+							</Link>
+						) : (
+							<Link className="auth-button" to="/login">
+								login
+							</Link>
+						)}
 					</form>
 				</Paper>
 			</Template>
