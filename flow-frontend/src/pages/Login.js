@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
+import AuthModal from '../components/auth/AuthModal';
 
 class Login extends Component {
 	render() {
-		return (
-			<div>
-				<h1>login</h1>
-			</div>
-		);
+		return <AuthModal />;
 	}
 }
 

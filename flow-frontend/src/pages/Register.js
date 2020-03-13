@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
+import AuthModal from '../components/auth/AuthModal';
 
 class Register extends Component {
 	render() {
-		return (
-			<div>
-				<h1>register</h1>
-			</div>
-		);
+		return <AuthModal />;
 	}
 }
 
