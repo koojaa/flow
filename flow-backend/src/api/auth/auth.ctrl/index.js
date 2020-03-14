@@ -1,6 +1,8 @@
 import User from '../../../db/models/user';
 
 export const register = async ctx => {
+  ctx.body = '123123';
+
   const { username, password } = ctx.request.body;
 
   try {
